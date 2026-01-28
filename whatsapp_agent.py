@@ -51,5 +51,5 @@ def webhook():
         return str(resp)
 
 if __name__ == "__main__":
-    # O servidor roda na porta 5000, que é a mesma que o ngrok vai apontar [cite: 108, 124]
-    app.run(port=5000)
+    # Mudamos para 0.0.0.0 para o Render conseguir enxergar o robô
+    app.run(host='0.0.0.0', port=5000)
